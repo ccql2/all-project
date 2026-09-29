@@ -1,0 +1,218 @@
+
+        <!DOCTYPE html>
+        <html lang="zh-CN">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>椒口称赞-防伪溯源查询中心</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    padding: 0;
+                }
+                .container {
+                    width: 90%;
+                    max-width: 400px; /* 调整为适合手机屏幕的宽度 */
+                    margin: 50px auto;
+                    background-color: #fff;
+                    padding: 20px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    word-wrap: break-word; /* 确保所有文本自动换行 */
+                    overflow-wrap: break-word; /* 确保所有文本自动换行 */
+                }
+                h1 {
+                    text-align: center;
+                    color: #333;
+                }
+                .section-title {
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin: 20px 0;
+                }
+                .info-section {
+                    margin-bottom: 20px;
+                }
+                .info-section label, .info-section span {
+                    display: block;
+                    word-wrap: break-word; /* 自动换行 */
+                    overflow-wrap: break-word; /* 自动换行 */
+                }
+                .info-section label {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                .highlight {
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    background-color: #f8d7da;
+                    color: #721c24;
+                    border: 1px solid #f5c6cb;
+                    word-wrap: break-word; /* 自动换行 */
+                    overflow-wrap: break-word; /* 自动换行 */
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                .image-button {
+                    display: block;
+                    text-align: right;
+                    margin-top: -20px; /* 调整按钮位置 */
+                }
+                .image-button button {
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                }
+                .hidden-image {
+                    display: none;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <!-- 突出显示防伪码 -->
+                <div class="highlight">防伪码: ead2eb0c8f</div>
+                <h1>椒口称赞-防伪溯源查询中心</h1>
+                <div class="info-section">
+                    <img src="https://pic.vjshi.com/2023-05-26/cdbd0139cf4b4cbe87c6f89d46741446/online/main.jpg?x-oss-process=style/w342_h192_center" alt="辣椒图片" style="width:100%;">
+                </div>
+                <div class="info-section">
+                    <label>所属片区:</label>
+                    <span>第一片区 </span>
+                    <div class="image-button">
+                        <button onclick="toggleImage('regionImage')">点击查看片区图片</button>
+                    </div>
+                    <div class="hidden-image" id="regionImage">
+                        <img src="https://www.ts.cn/xwzx/ymkxj/202210/W020221020370661533672.jpeg" alt="第一片区 图片">
+                    </div>
+                </div>
+                <div class="info-section">
+                    <label>负责人:</label>
+                    <span id="operator">张三</span>
+                </div>
+                <div class="info-section">
+                    <label>操作时间:</label>
+                    <span>2025-02-12 17:07:52</span>
+                </div>
+                <div class="info-section">
+                    <label>区域负责人:</label>
+                    <span>李四</span>
+                </div>
+
+                <!-- 种植信息板块 -->
+                <div class="section-title">种植信息</div>
+                <div class="info-section">
+                    <label>使用的肥料:</label>
+                    <span>尿素,复合肥</span>
+                </div>
+                <div class="info-section">
+                    <label>农事活动:</label>
+                    <span>病虫害防治</span>
+                </div>
+                <div class="info-section">
+                    <label>浇水施肥打药记录:</label>
+                    <div>
+                    <span>2023-04-01 08:00 张三浇水</span>, <span>2023-04-15 14:00 李四施肥</span>
+                    </div>
+                </div>
+                <div class="info-section">
+                    <label>收割时间:</label>
+                    <span>2023-06-01 09:00</span>
+                </div>
+                <div class="info-section">
+                    <label>晾晒时间:</label>
+                    <span>2023-06-02 10:00</span>
+                </div>
+
+                <!-- 包装信息板块 -->
+                <div class="section-title">包装信息</div>
+                <div class="info-section">
+                    <label>包装时间:</label>
+                    <span>暂无数据</span>
+                </div>
+                <div class="info-section">
+                    <label>包装负责人:</label>
+                    <span>暂无数据</span>
+                </div>
+                <div class="info-section">
+                    <label>包装图片:</label>
+                    <div class="image-button">
+                        <button onclick="toggleImage('packagingImage')">点击查看包装图片</button>
+                    </div>
+                    <div class="hidden-image" id="packagingImage">
+                        <img src="https://img95.699pic.com/photo/60031/9724.jpg_wh860.jpg" alt="包装图片">
+                    </div>
+                </div>
+
+                <!-- 物流信息板块 -->
+                <div class="section-title">物流信息</div>
+                <div class="info-section">
+                    <label>物流公司:</label>
+                    <span>暂无数据</span>
+                </div>
+                <div class="info-section">
+                    <label>物流单号:</label>
+                    <span>暂无数据</span>
+                </div>
+                <div class="info-section">
+                    <label>打包图片:</label>
+                    <div class="image-button">
+                        <button onclick="toggleImage('logisticsImage')">点击查看打包图片</button>
+                    </div>
+                    <div class="hidden-image" id="logisticsImage">
+                        <img src="https://img95.699pic.com/photo/30789/7478.jpg_wh300.jpg" alt="打包图片">
+                    </div>
+                </div>
+
+                <!-- 区块链信息 -->
+                <div class="info-section">
+                    <label>区块链信息:</label>
+                    <div>
+                        <p>区块高度: 15</p>
+                        <p>区块哈希: ead2eb0c8fe9757a98a9d7ecfd3f3a1d582ebf3c613e7dadc6afae23eb031fe7</p>
+                        <p>前一区块哈希: f10e1e61752159899d1f7b53f90edd08470796eb3d81476db98fb3315944a29c</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // 解密函数
+                function decryptData(encryptedData, key) {
+                    const decodedData = atob(encryptedData);
+                    const decodedKey = atob(key);
+                    const decryptedBytes = new TextEncoder().encode(decodedData).map((byte, index) => byte ^ decodedKey.charCodeAt(index % decodedKey.length));
+                    return new TextDecoder().decode(new Uint8Array(decryptedBytes));
+                }
+
+                // 在页面加载时解密并显示
+                document.addEventListener("DOMContentLoaded", function () {
+                    const operatorSpan = document.getElementById("operator");
+                    const encryptedOperator = "gAAAAABn3i-wWKBfVd8Lju-q1em0FSYfEj14XV_Byr9OSMP-21XkaLdkiwtwb8LYLf7EKwFp4AO21FaIv3sW1sZyK9Aa_q2Mzg==";
+                    const key = "fyxSuyTaLPW3vAXyvbc95iOrW3Xjr9vnmY5nW_15Vj0=";
+                    operatorSpan.textContent = decryptData(encryptedOperator, key);
+                });
+
+                // 切换图片显示
+                function toggleImage(imageId) {
+                    var img = document.getElementById(imageId);
+                    if (img.style.display === 'none' || img.style.display === '') {
+                        img.style.display = 'block';
+                    } else {
+                        img.style.display = 'none';
+                    }
+                }
+            </script>
+        </body>
+        </html>
+        
